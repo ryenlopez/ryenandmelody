@@ -1,0 +1,58 @@
+.nav-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #444;
+}
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #ddd;
+}
+.top-home-button {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  font-size: 13px;
+  background-color: rgba(211, 211, 211, 0.35); /* light gray with 35% opacity */
+  color: #000; /* black text */
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  z-index: 1000;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.top-home-button:hover {
+  background-color: rgba(211, 211, 211, 0.5); /* slightly stronger on hover */
+}
+
+

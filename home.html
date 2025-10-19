@@ -3,19 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryen & Melody – Home</title>
-  <!-- Import Lora font from Google Fonts -->
+  <title>Ryen + Melody - Invitation</title>
+
+  <!-- ✅ Link to shared styles -->
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
-      background: #fff;
-      color: #000;
-      font-family: 'Lora', serif;
-      scroll-behavior: smooth;
+      background: #000;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+      font-family: 'Lora', serif;
+    }
+
+    .page-image {
+      width: 100%;
+      max-width: 900px;
+      border-bottom: 0.5px solid #555;
+      margin-bottom: 2px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+    }
+
+    .page {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .qr-link:hover {
+      opacity: 0.8;
+      cursor: pointer;
     }
 
     .container {
@@ -23,11 +52,6 @@
       max-width: 900px;
       padding: 40px 20px;
       text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 30px;
     }
 
     .nav-buttons {
@@ -54,29 +78,83 @@
       background-color: #444;
     }
 
-    .section {
-      margin-top: 60px;
-      padding: 20px;
-      border-top: 1px solid #ccc;
+    #music-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e0e0e0;
+      color: #000;
+      border: 1px solid #ccc;
+      padding: 10px 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 999;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    #music-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    audio {
+      display: none;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>Ryen & Melody</h1>
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" loop>
+    <source src="Invitation Images/music.mp3" type="audio/mpeg">
+  </audio>
 
+  <!-- 🔊 Music Control Button -->
+  <div id="music-btn">🔊 Play Music</div>
+
+
+  <!-- 🔘 Navigation Buttons -->
+  <div class="container">
+    <h1>Ryen + Melody</h1>
     <div class="nav-buttons">
-      <button onclick="scrollToSection('home')">Home</button>
-<button onclick="scrollToSection('invitation')">Invitation</button>
-      <button onclick="scrollToSection('rsvp')">RSVP</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeuY51OmRi2kdxgcgpYqFgaHxRg6IelMCcGmefL7RdvqZBb8Q/viewform', '_blank')" class="nav-button">RSVP</button>
       <button onclick="scrollToSection('moments')">Moments</button>
       <button onclick="scrollToSection('faqs')">FAQs</button>
       <button onclick="scrollToSection('hotels')">Nearby Hotels</button>
       <button onclick="scrollToSection('navigation')">Navigation</button>
     </div>
+  </div>
 
+  <!-- 📄 Pages -->
+  <div class="page-image"><img src="Invitation Images/1.jpg" alt="Page 1"></div>
+  <div class="page-image"><img src="Invitation Images/2.jpg" alt="Page 2"></div>
+  <div class="page-image">
+    <div class="page">
+      <img src="Invitation Images/3.jpg" alt="Page 3">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuY51OmRi2kdxgcgpYqFgaHxRg6IelMCcGmefL7RdvqZBb8Q/viewform"
+         target="_blank"
+         class="qr-link"
+         style="
+           position: absolute;
+           bottom: 10.3%;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 280px;
+           height: 280px;
+           display: block;
+         ">
+      </a>
+    </div>
+  </div>
+  <div class="page-image"><img src="Invitation Images/4.jpg" alt="Page 4"></div>
+  <div class="page-image"><img src="Invitation Images/5.jpg" alt="Page 5"></div>
+  <div class="page-image"><img src="Invitation Images/6.jpg" alt="Page 6"></div>
+  <div class="page-image"><img src="Invitation Images/7.jpg" alt="Page 7"></div>
+
+  <!-- 🎵 Music Script -->
   <script>
     function scrollToSection(id) {
       const section = document.getElementById(id);
@@ -84,6 +162,31 @@
         section.scrollIntoView({ behavior: 'smooth' });
       }
     }
+
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+    let isPlaying = false;
+
+    music.volume = 0.7;
+
+    btn.addEventListener('click', async () => {
+      try {
+        if (!isPlaying) {
+          await music.play();
+          isPlaying = true;
+          btn.innerText = '🔇 Pause';
+          btn.style.opacity = '0.6';
+        } else {
+          music.pause();
+          isPlaying = false;
+          btn.innerText = '🔊 Play Music';
+          btn.style.opacity = '1';
+        }
+      } catch (err) {
+        console.error('Music play failed:', err);
+        btn.innerText = '❌ Tap Again';
+      }
+    });
   </script>
 
 </body>
