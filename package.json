@@ -1,0 +1,13 @@
+{
+  "name": "my-html-website",
+  "version": "1.0.0",
+  "description": "A simple HTML website project.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'No build process defined.'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

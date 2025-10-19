@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryen & Melody – Home</title>
+  <!-- Import Lora font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #000;
+      font-family: 'Lora', serif;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .nav-buttons button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Lora', serif;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #444;
+    }
+
+    .section {
+      margin-top: 60px;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Ryen & Melody</h1>
+
+    <div class="nav-buttons">
+      <button onclick="scrollToSection('home')">Home</button>
+<button onclick="scrollToSection('invitation')">Invitation</button>
+      <button onclick="scrollToSection('rsvp')">RSVP</button>
+      <button onclick="scrollToSection('moments')">Moments</button>
+      <button onclick="scrollToSection('faqs')">FAQs</button>
+      <button onclick="scrollToSection('hotels')">Nearby Hotels</button>
+      <button onclick="scrollToSection('navigation')">Navigation</button>
+    </div>
+
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
