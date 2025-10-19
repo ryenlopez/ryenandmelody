@@ -1,0 +1,12 @@
+  <!-- 🔘 Navigation Buttons -->
+ <div class="container">
+    <div class="nav-buttons">
+    <button onclick="location.href='home.html'" class="nav-button">Home</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeuY51OmRi2kdxgcgpYqFgaHxRg6IelMCcGmefL7RdvqZBb8Q/viewform', '_blank')" class="nav-button">RSVP</button>
+      <button onclick="scrollToSection('moments')">Moments</button>
+      <button onclick="scrollToSection('faqs')">FAQs</button>
+      <button onclick="window.open('navigation.html', '_blank')" class="nav-button">Navigation</button>
+      <button onclick="window.open('contact.html', '_blank')" class="nav-button">Contact Us</button>
+      <button onclick="scrollToSection('gifts')">Gifts</button>
+    </div>
+  </div>

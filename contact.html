@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryen + Melody – Contact Us</title>
+
+  <!-- ✅ Link to shared styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+      font-family: 'Lora', serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .nav-buttons button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Lora', serif;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #444;
+    }
+
+    .contact-section {
+      max-width: 900px;
+      padding: 0 20px 40px;
+      text-align: left;
+    }
+
+    .contact-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .contact-card {
+      background-color: #111;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      font-size: 1.4em;
+    }
+
+    .contact-card p {
+      margin: 8px 0;
+    }
+
+    .contact-card a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contact-card a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔘 Navigation Buttons -->
+ <div class="container">
+    <div class="nav-buttons">
+    <button onclick="location.href='home.html'" class="nav-button">Home</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeuY51OmRi2kdxgcgpYqFgaHxRg6IelMCcGmefL7RdvqZBb8Q/viewform', '_blank')" class="nav-button">RSVP</button>
+      <button onclick="scrollToSection('moments')">Moments</button>
+      <button onclick="scrollToSection('faqs')">FAQs</button>
+      <button onclick="window.open('navigation.html', '_blank')" class="nav-button">Navigation</button>
+      <button onclick="window.open('contact.html', '_blank')" class="nav-button">Contact Us</button>
+      <button onclick="scrollToSection('gifts')">Gifts</button>
+    </div>
+  </div>
+
+  <!-- 📞 Contact Info -->
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="contact-card">
+      <h3>Melody Garcia</h3>
+      <p>📞 Phone: 0926 704 7896</p>
+      <p>🌐 Facebook: <a href="https://www.facebook.com/melody.garcia.16547" target="_blank">facebook.com/melodygarcia</a></p>
+      <p>📧 Email: melodygarciaavila@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Ryen Lopez</h3>
+      <p>📞 Phone: 0956 823 5240</p>
+      <p>🌐 Facebook: <a href="https://www.facebook.com/ryenlopez" target="_blank">facebook.com/ryenlopez</a></p>
+      <p>📧 Email: ryenlopez123@gmail.com</p>
+    </div>
+  </div>
+
+</body>
+</html>

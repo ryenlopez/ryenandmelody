@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryen + Melody – Navigation</title>
+
+  <!-- ✅ Link to shared styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+      font-family: 'Lora', serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .nav-buttons button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Lora', serif;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #444;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      margin-bottom: 40px;
+    }
+
+    .info-section {
+      max-width: 900px;
+      padding: 0 20px 40px;
+      text-align: left;
+    }
+
+    .info-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .info-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .info-section li {
+      margin-bottom: 10px;
+    }
+
+    .info-section a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .info-section a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔘 Navigation Buttons -->
+ <div class="container">
+    <div class="nav-buttons">
+    <button onclick="location.href='home.html'" class="nav-button">Home</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeuY51OmRi2kdxgcgpYqFgaHxRg6IelMCcGmefL7RdvqZBb8Q/viewform', '_blank')" class="nav-button">RSVP</button>
+      <button onclick="scrollToSection('moments')">Moments</button>
+      <button onclick="scrollToSection('faqs')">FAQs</button>
+      <button onclick="window.open('navigation.html', '_blank')" class="nav-button">Navigation</button>
+      <button onclick="window.open('contact.html', '_blank')" class="nav-button">Contact Us</button>
+      <button onclick="scrollToSection('gifts')">Gifts</button>
+    </div>
+  </div>
+
+  <h1>Venue Location – By the Hill Antipolo</h1>
+
+  <!-- 🗺️ Embedded Google Map -->
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.982358749659!2d121.24283707509752!3d14.63982107696486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bfc08a760ec3%3A0x63cd5ab379bc9a2c!2sBy%20the%20Hill%20Antipolo!5e0!3m2!1sen!2sph!4v1697720000000!5m2!1sen!2sph"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <!-- 🕒 Travel Time -->
+ <div class="info-section">
+  <h2>Estimated Travel Time</h2>
+  <ul>
+    
+    <li><strong>From Novaliches, Quezon City:</strong> About <strong>55 minutes - 1 hour</strong> by car (~30 km). Bus routes via Cubao and Marcos Highway may take up to 1.5–2 hours.</li>
+    <li><strong>From Parañaque City:</strong> Around <strong>1 hour 55 minutes</strong> by bus, or <strong>1 hour 30 minutes</strong> by car depending on traffic.</li>
+    <li><strong>Public transport may take 2–3 hours depending on traffic.</li>
+  </ul>
+</div>
+
+
+  <!-- 🏨 Nearby Hotels -->
+  <div class="info-section" id="hotels">
+    <h2>Nearby Hotels</h2>
+    <ul><li><a href=https://www.google.com/maps/place/Boso-Boso+Highlands+Resort+And+Hotel/@14.6287819,121.23163,17z/data=!3m1!4b1!4m9!3m8!1s0x3397b84649652f7b:0xa9d0f7cd8bbb403e!5m2!4m1!1i2!8m2!3d14.6287819!4d121.2342103!16s%2Fg%2F1tj5hpcp?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Boso-Boso Highlands Resort And Hotel</a></li>
+      
+      <li><a href="https://www.google.com/maps/place/Antipolo+Hostel+Karerina/" target="_blank">Antipolo Hostel Karerina</a></li>
+      <li><a href="https://www.google.com/maps/place/RedDoorz" target="_blank">RedDoorz near Boso-Boso</a></li>
+      <li><a href="https://www.google.com/travel/search?q=nearby%20hotels%20in%20by%20the%20hill%20antipolo%20boso%20boso" target="_blank">More options on Google Travel</a></li>
+      
+    </ul>
+  </div>
+
+</body>
+</html>
